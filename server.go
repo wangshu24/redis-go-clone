@@ -26,11 +26,11 @@ func main(){
 	}
 
 	buf := make([]byte, 1024)
-	for {
+	// for {
 		connection.Read(buf)
 		message := "Return: " + string(buf)
 		fmt.Println(message)
-		connection.Write([]byte(message))
-	}
+		connection.Write([]byte("+PONG\r\n"))
+	// }
 		
 }
